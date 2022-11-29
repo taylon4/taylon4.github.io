@@ -1,0 +1,43 @@
+.layout{
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 4fr 1fr;
+}
+.option-bar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(196, 196, 196);
+    align-items: center;
+    border-radius: 2px;
+}
+body{
+    background-color: rgb(75, 123, 190);
+}
+.btn, input{
+    height: 35px;
+    padding: 0 1em;
+}
+
+.container{
+    --h: 6;
+    --w: 6;
+    background-color: rgb(123, 123, 255);
+    display: grid;
+    height: 800px;
+    grid-template-columns: repeat(var(--w), 1fr);
+    grid-template-rows: repeat(var(--h), 1fr);
+    gap: 1px;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.pixel{
+    --y: 0;
+    --x: 0;
+    --red: 255;
+    --green: 255;
+    --blue: 255;
+    background-color: white;
+    border-radius: 1px;
+}
