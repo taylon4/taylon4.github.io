@@ -13,6 +13,8 @@ function create_grid(width, height){
     if(width > 200){width = 200}
     if(height > 200){height = 200}
     
+
+
     container.style.setProperty("--w", width);
     container.style.setProperty("--h", height);
     
@@ -22,7 +24,7 @@ function create_grid(width, height){
         div.classList.add('pixel')
         div.style.setProperty("--y", height - ~~(i/height)-1)
         div.style.setProperty("--x", i%width)
-       
+
         //set them all to WHITE
         div.style.setProperty("--red",255)
         div.style.setProperty("--green",255)
@@ -79,11 +81,11 @@ clear.addEventListener('click', function(){
     reset()
 })
 
-widthBox.addEventListener('keyup', function(){
+widthBox.addEventListener('input', function(){
     width = widthBox.value
     reset()
 })
-heightBox.addEventListener('keyup', function(){
+heightBox.addEventListener('input', function(){
     height = heightBox.value
     reset()
 })
