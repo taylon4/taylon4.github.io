@@ -1,12 +1,12 @@
 <html> 
   <head>
-    <title>Hello World</title> 
+    <title>Pixels 🠖 .PPM</title> 
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body> 
-    <h1 class="header">Paint</h1> 
-    
+    <h1 class="header" style="text-indent: 2%; font-family: 'Courier New', Courier, monospace;">Pixels 🠖 .PPM File</h1>
+    🖱 Click or Drag to Draw
     <div class="layout">
         
         <div class="container" ondragstart="return false;" ondrop="return false;"></div>
@@ -14,14 +14,16 @@
         <div class="option-bar">
             <b class="size">Size: <input type="number" value="5"  style="font-size: 25px;"min="1" max="200" class="width"></b>
             <div class="middle">
-              <label for="Color" class="color">Color: </b><input type="color"></label>
-              <button class="clear option">Clear</button>
-              <button class='option'>Rainbowify</button>
-              <button class="option random_board"><p>Random</p> <p style="margin-top: -10px;">Board</p></button>
+              <div class="option color">
+                <label for="Color" class="color">Color: <input type="color" class="color_select"></label>
+              </div>
+              <button class="clear option button">Clear</button>
+              <button class='option button'>Rainbowify</button>
+              <button class="option random_board button"><p>Random</p> <p style="margin-top: -10px;">Board</p></button>
             </div>
             
             
-            <button class="download">Download</button>
+            <button class="download">Download as .ppm</button>
         </div>
     </div>
     

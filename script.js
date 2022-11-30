@@ -4,7 +4,7 @@ const widthBox = document.querySelector('.width')
 const heightBox = document.querySelector('.width')
 let width = heightBox.value
 let height = heightBox.value
-const color = document.querySelector('.color')
+const color = document.querySelector('.color_select')
 const clear = document.querySelector('.clear')
 const download = document.querySelector('.download')
 var mousehold = false;
@@ -94,9 +94,9 @@ function random_board(){ //fill about 30% of the pixels with random values
     for(let i = 0; i < pixels.length; i++){
         let decide = Math.random();
         if(decide < 0.3){ //only 30% of the time
-            let r = ~~(Math.random()*255)
-            let g = ~~(Math.random()*255)
-            let b = ~~(Math.random()*255)
+            let r = ~~(56+Math.random()*200)
+            let g = ~~(56+Math.random()*200)
+            let b = ~~(56+Math.random()*200)
             pixels[i].style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
             pixels[i].style.setProperty("--red",r)
             pixels[i].style.setProperty("--green",g)

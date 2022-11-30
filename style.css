@@ -17,10 +17,17 @@ body{
 }
 
 .option{
-    font-size: larger;
+    font-size: larger ;
     margin: 10%;
-}
+    border: 2px solid black;
+    font-weight: bold;
+    background-color: aquamarine;
 
+}
+.button:hover, .color:hover, .download:hover, .size:hover{
+    background-color:#20b88f;
+    transition: 0.3s;
+}
 .dim-col{
     float: right;
     width: 33%;
@@ -28,10 +35,15 @@ body{
     align-items: center;
 }
 .size{
-    margin-top: 40px;
+    margin-top: 30px;
+    padding-top: 2.5%;
     font-size: 25px;
-    height: 10%;
+    height: 8%;
+    width: 40%;
     text-align: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    border: 2px solid black;
 }
 .width{
     height: 70%;
@@ -43,17 +55,20 @@ body{
     height: 60%;
     width: 70%;
     display: grid;
-
+    
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 .download{
-    margin-top: 60px;
+    margin-top: 8%;
     font-style: oblique;
     font-size: larger;
     width: 80%;
     height: 10%;
     text-align: center;
+    border-radius: 2px;
+    font-weight: bold;
+    background-color: #20b88f;
 }
 .container{
     --h: 6;
@@ -72,10 +87,10 @@ body{
 
 .color{
     font-size: 25px;
-    padding-top: 40%;
+    padding-top: 25%;
+    padding-left: 10%;
     justify-content: center;
-    align-items: center;
-    margin-left: 15%;
+    align-content: center;
 }
 
 .pixel{
