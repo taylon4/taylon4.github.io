@@ -54,7 +54,7 @@ body{
     justify-content: center;
     background-color: #B9D0A9;
     border: 2px solid black;
-    
+    cursor:default;
 }
 .width{
     height: 70%;
@@ -73,7 +73,7 @@ body{
 .download{
     margin-top: 8%;
     font-style: oblique;
-    font-size: larger;
+    font-size: 1.5vw;
     width: 80%;
     height: 10%;
     text-align: center;

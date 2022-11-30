@@ -109,7 +109,7 @@ document.querySelector(".random_board").addEventListener('click', random_board)
 
 function download_pixels(){
     let pixels = document.querySelectorAll('.pixel')
-    let array = []
+
     var text = ""
     text += "P6\n" + width + " " + height + "\n255\n"
     for(let h = 0; h < height; h++){
@@ -145,5 +145,58 @@ function download_pixels(){
 download.addEventListener('click', function(){
     download_pixels()
 })
+
+function getPositiveAngleDiff(a, b){
+    return a < b ? a+360-b : a-b
+}
+
+//num is a number between 0 and 1
+function getRainbowRGB(num){
+    let angle = num*360
+    let rgb = []
+    for(let i = 1; i <= 3; i++){
+        let startAngle = ((i+1)*120)%360
+        let diffFromStart = getPositiveAngleDiff(angle, startAngle)
+        if(diffFromStart < 60){
+            rgb[i-1] = ~~(diffFromStart/60*255)
+        }
+            
+        else if (diffFromStart <= 180){
+            rgb[i-1] = 255
+        }
+            
+        else if (diffFromStart < 240){
+            rgb[i-1] = ~~((240-diffFromStart)/60*255)
+        }
+        else{
+            rgb[i-1] = 0
+        }
+            
+    }
+    return rgb
+}
+
+function rainbowify(){
+    let pixels = document.querySelectorAll('.pixel')
+    for(let i = width-1; i >= 0; i--){
+        let num = (i)/width
+        for(let j = 0; j < width; j++){
+            let r = pixels[i*width+j].style.getPropertyValue("--red")
+            let g = pixels[i*width+j].style.getPropertyValue("--green")
+            let b = pixels[i*width+j].style.getPropertyValue("--blue")
+            if(!(r==255 &&g==255&&b==255)){//if pixel is not white
+                let rgb = getRainbowRGB(num)
+                console.log(rgb)
+                pixels[i*width+j].style.backgroundColor = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+                pixels[i*width+j].style.setProperty("--red",rgb[0])
+                pixels[i*width+j].style.setProperty("--green",rgb[1])
+                pixels[i*width+j].style.setProperty("--blue",rgb[2])
+            }
+            
+        }
+    }
+}
+
+document.querySelector(".rainbow").addEventListener('click', rainbowify)
 
 create_grid(width, height);
