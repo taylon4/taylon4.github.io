@@ -5,8 +5,12 @@
   </head>
 
   <body> 
-    <h1 class="header" style="text-indent: 2%; font-family: 'Courier New', Courier, monospace;">Pixels 🠖 .PPM File</h1>
-    🖱 Click or Drag to Draw
+    <div class="top">
+      <h1 class="header">Pixels 🠖 .PPM File</h1>
+      <h1 class="header">🖱 Click or Drag to Draw</h1>
+    </div>
+    
+    
     <div class="layout">
         
         <div class="container" ondragstart="return false;" ondrop="return false;"></div>
@@ -15,7 +19,7 @@
             <b class="size">Size: <input type="number" value="5"  style="font-size: 25px;"min="1" max="200" class="width"></b>
             <div class="middle">
               <div class="option color">
-                <label for="Color" class="color">Color: <input type="color" class="color_select"></label>
+                <label for="Color">Color: <input type="color" class="color_select"></label>
               </div>
               <button class="clear option button">Clear</button>
               <button class='option button'>Rainbowify</button>
@@ -23,7 +27,7 @@
             </div>
             
             
-            <button class="download">Download as .ppm</button>
+            <button class="download option">Download as .ppm</button>
         </div>
     </div>
     

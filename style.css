@@ -8,21 +8,30 @@
 
     flex-direction: column;
     align-items: center;
-    background-color: rgb(196, 196, 196);
+    background-color: #1B413F;
     
     border-radius: 2px;
 }
 body{
-    background-color: rgb(75, 123, 190);
+    background-color: #65a994;
+}
+
+.top{
+    display: grid;
+    height: 10%;
+    grid-template-columns: 1fr 1fr;
+    text-align: center; 
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .option{
-    font-size: larger ;
+    font-size: 1.5vw ;
     margin: 10%;
     border: 2px solid black;
     font-weight: bold;
-    background-color: aquamarine;
-
+    background-color: #B9D0A9;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
 }
 .button:hover, .color:hover, .download:hover, .size:hover{
     background-color:#20b88f;
@@ -40,10 +49,12 @@ body{
     font-size: 25px;
     height: 8%;
     width: 40%;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: #B9D0A9;
     border: 2px solid black;
+    
 }
 .width{
     height: 70%;
@@ -68,13 +79,14 @@ body{
     text-align: center;
     border-radius: 2px;
     font-weight: bold;
-    background-color: #20b88f;
+    background-color: #B9D0A9;
+    
 }
 .container{
     --h: 6;
     --w: 6;
     float: right;
-    background-color: rgb(123, 123, 255);
+    background-color: #eab6bd;
     display: grid;
     height: 760;
     grid-template-columns: repeat(var(--w), 1fr);
@@ -82,15 +94,25 @@ body{
     aspect-ratio: 1;
     gap: 1px;
     padding: 3px;
-    border-radius: 2px;
+    border: 4px solid #ff7688;
 }
 
 .color{
-    font-size: 25px;
-    padding-top: 25%;
-    padding-left: 10%;
+    font-size: 1.5vw;
+    padding-top: 29%;
+    padding-left: 7%;
     justify-content: center;
     align-content: center;
+    cursor: default;
+}
+
+.color_select{
+    cursor: pointer;
+    
+}
+.color_select:hover{
+    background-color: #ff7688;
+    transition: 0.3s;
 }
 
 .pixel{
