@@ -88,6 +88,25 @@ heightBox.addEventListener('keyup', function(){
     reset()
 })
 
+function random_board(){ //fill about 30% of the pixels with random values
+    reset();
+    let pixels = document.querySelectorAll('.pixel')
+    for(let i = 0; i < pixels.length; i++){
+        let decide = Math.random();
+        if(decide < 0.3){ //only 30% of the time
+            let r = ~~(Math.random()*255)
+            let g = ~~(Math.random()*255)
+            let b = ~~(Math.random()*255)
+            pixels[i].style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+            pixels[i].style.setProperty("--red",r)
+            pixels[i].style.setProperty("--green",g)
+            pixels[i].style.setProperty("--blue",b)
+        }
+    }
+}
+
+document.querySelector(".random_board").addEventListener('click', random_board)
+
 function download_pixels(){
     let pixels = document.querySelectorAll('.pixel')
     let array = []

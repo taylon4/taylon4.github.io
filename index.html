@@ -11,12 +11,15 @@
         
         <div class="container" ondragstart="return false;" ondrop="return false;"></div>
         
-        <div class="option-bar" id="test">
-            <button class="clear">Clear</button>
-            <label for="Color">Color: <input type="color" class="color"></label>
-            <div class="dim">
-              <input type="number" value="5" placeholder="Width" min="1" max="200" class="width">
+        <div class="option-bar">
+            <b class="size">Size: <input type="number" value="5"  style="font-size: 25px;"min="1" max="200" class="width"></b>
+            <div class="middle">
+              <label for="Color" class="color">Color: </b><input type="color"></label>
+              <button class="clear option">Clear</button>
+              <button class='option'>Rainbowify</button>
+              <button class="option random_board"><p>Random</p> <p style="margin-top: -10px;">Board</p></button>
             </div>
+            
             
             <button class="download">Download</button>
         </div>

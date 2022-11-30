@@ -1,12 +1,13 @@
 .layout{
     display: grid;
     gap: 3px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
 }
 .option-bar{
     display: flex;
-    
+
     flex-direction: column;
+    align-items: center;
     background-color: rgb(196, 196, 196);
     
     border-radius: 2px;
@@ -14,24 +15,45 @@
 body{
     background-color: rgb(75, 123, 190);
 }
-.btn, input{
-    height: 35px;
-    padding: 0 1em;
+
+.option{
+    font-size: larger;
+    margin: 10%;
 }
+
 .dim-col{
     float: right;
     width: 33%;
     justify-content: center;
     align-items: center;
 }
-.dim{
-    padding-right: 7.5px;
-    padding-left: 5;
+.size{
+    margin-top: 40px;
+    font-size: 25px;
+    height: 10%;
+    text-align: center;
+}
+.width{
+    height: 70%;
+    width: 150px;
+    font-size: 25em;
+    padding-left: 1em;
+}
+.middle{
+    height: 60%;
+    width: 70%;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 .download{
-    margin-top: 50px;
+    margin-top: 60px;
+    font-style: oblique;
+    font-size: larger;
     width: 80%;
-    height: 20px;
+    height: 10%;
+    text-align: center;
 }
 .container{
     --h: 6;
@@ -48,6 +70,13 @@ body{
     border-radius: 2px;
 }
 
+.color{
+    font-size: 25px;
+    padding-top: 40%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+}
 
 .pixel{
     --y: 0;
