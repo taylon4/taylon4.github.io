@@ -1,7 +1,7 @@
 
 const container = document.querySelector('.container')
 const widthBox = document.querySelector('.width')
-const heightBox = document.querySelector('.height')
+const heightBox = document.querySelector('.width')
 let width = heightBox.value
 let height = heightBox.value
 const color = document.querySelector('.color')
@@ -10,6 +10,9 @@ const download = document.querySelector('.download')
 var mousehold = false;
 
 function create_grid(width, height){
+    if(width > 200){width = 200}
+    if(height > 200){height = 200}
+    
     container.style.setProperty("--w", width);
     container.style.setProperty("--h", height);
     
